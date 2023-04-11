@@ -130,6 +130,8 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+export PRETTIERD_DEFAULT_CONFIG="~/.config/prettier/.prettierrc.json"
+
 fpath+=~/.zfunc
 autoload -Uz compinit
 compinit
