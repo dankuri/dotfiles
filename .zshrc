@@ -42,7 +42,7 @@ ZSH_THEME="dracula"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
-unsetopt correct_all  
+unsetopt correct_all
 setopt correct
 
 # Uncomment the following line to display red dots whilst waiting for completion.
@@ -120,7 +120,7 @@ alias wthr="curl wttr.in"
 alias zj="zellij"
 
 # ssh aliases here...
-source .zsh_alias
+[ -f ~/.zsh_alias ] && source ~/.zsh_alias
 
 alias dotfiles='/usr/bin/git --git-dir=/Users/dankuri/.dotfiles --work-tree=/Users/dankuri'
 
@@ -129,6 +129,7 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 fpath+=~/.zfunc
+autoload -Uz compinit
 compinit
 eval "$(zoxide init zsh)"
 
@@ -154,8 +155,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -f "/Users/dankuri/.ghcup/env" ] && source "/Users/dankuri/.ghcup/env" # ghcup-env
 
-please daily
+# please daily
 
-autoload -Uz compinit
 zstyle ':completion:*' menu select
-
+kitty + complete setup zsh | source /dev/stdin
