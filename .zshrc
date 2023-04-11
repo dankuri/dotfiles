@@ -118,6 +118,8 @@ alias pip="pip3"
 alias btop="bpytop"
 alias wthr="curl wttr.in"
 alias zj="zellij"
+alias zjc="zellij --layout compact"
+alias lg="lazygit"
 
 # ssh aliases here...
 [ -f ~/.zsh_alias ] && source ~/.zsh_alias
