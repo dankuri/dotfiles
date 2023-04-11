@@ -119,6 +119,7 @@ alias btop="bpytop"
 alias wthr="curl wttr.in"
 alias zj="zellij"
 alias zjc="zellij --layout compact"
+alias zja="zellij a"
 alias lg="lazygit"
 
 # ssh aliases here...
