@@ -10,7 +10,6 @@ local servers = {
   "tsserver",
   "volar",
   "rust_analyzer",
-  "yamlls",
   "lua_ls",
   "jsonls",
   "docker_compose_language_service",
@@ -18,6 +17,15 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
+  if lsp == "rust_analyzer" then
+    require("rust-tools").setup {
+      server = {
+        on_attach = on_attach,
+        capabilities = capabilities,
+      },
+    }
+    return
+  end
   lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
