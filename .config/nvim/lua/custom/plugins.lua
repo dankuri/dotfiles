@@ -123,6 +123,10 @@ local plugins = {
     end,
   },
   {
+    "eandrju/cellular-automaton.nvim",
+    event = "BufRead",
+  },
+  {
     "mbbill/undotree",
     event = "BufRead",
   },
