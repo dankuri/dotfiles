@@ -54,6 +54,10 @@ local plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter-context",
+    event = "BufEnter",
+  },
+  {
+    "christoomey/vim-tmux-navigator",
     lazy = false,
   },
   {
