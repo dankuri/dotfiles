@@ -101,6 +101,10 @@ local plugins = {
       }
     end,
   },
+  {
+    "mbbill/undotree",
+    event = "BufRead",
+  },
 }
 
 return plugins
