@@ -122,6 +122,10 @@ alias zjc="zellij --layout compact"
 alias zja="zellij a"
 alias lg="lazygit"
 
+# my binds
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
 # ssh aliases here...
 [ -f ~/.zsh_alias ] && source ~/.zsh_alias
 
