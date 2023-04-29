@@ -2,35 +2,23 @@ local plugins = {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "jose-elias-alvarez/null-ls.nvim",
-      config = function()
-        require "custom.configs.null-ls"
-      end,
+      {
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+          require "custom.configs.null-ls"
+        end,
+      },
+      {
+        "williamboman/mason.nvim",
+      },
+      {
+        "williamboman/mason-lspconfig.nvim",
+      },
     },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end,
-  },
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "html-lsp",
-        "css-lsp",
-        "emmet-ls",
-        "prettierd",
-        "tailwindcss-language-server",
-        "typescript-language-server",
-        "vue-language-server",
-        "rust-analyzer",
-        "rustfmt",
-        "lua-language-server",
-        "stylua",
-        "docker-compose-language-service",
-        "dockerfile-language-server",
-      },
-    },
   },
   {
     "nvim-treesitter/nvim-treesitter",
