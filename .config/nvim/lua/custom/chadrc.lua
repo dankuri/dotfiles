@@ -3,6 +3,9 @@ local M = {}
 M.ui = {
   theme = "rosepine",
   transparency = false,
+  statusline = {
+    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+  },
   nvdash = {
     load_on_startup = false,
     -- until i figure out a way to not make it inverted
@@ -21,7 +24,6 @@ M.ui = {
       "⠀⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
       "⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀⠀⠀⠀         ",
     },
-
     buttons = {
       { "  Find File", "Spc f f", "Telescope find_files" },
       { "  Recent Files", "Spc f o", "Telescope oldfiles" },
@@ -30,7 +32,6 @@ M.ui = {
       { "  Themes", "Spc t h", "Telescope themes" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
-
     cheatsheet = { theme = "simple" }, -- simple/grid
   },
 }
