@@ -9,6 +9,16 @@ M.general = {
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "tmux window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "tmux window up" },
     ["<leader>u"] = { "<cmd> UndotreeToggle<CR>", "toggle undo tree" },
+    ["<leader>fW"] = {
+      function()
+        require("telescope.builtin").live_grep {
+          additional_args = function(args)
+            return vim.list_extend(args, { "--hidden", "--no-ignore" })
+          end,
+        }
+      end,
+      "find words in all files",
+    },
   },
 }
 return M
