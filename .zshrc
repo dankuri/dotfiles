@@ -75,6 +75,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git docker docker-compose zsh-autosuggestions iterm2)
 
 zstyle :omz:plugins:iterm2 shell_integration yes
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
