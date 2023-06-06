@@ -122,6 +122,7 @@ alias zj="zellij"
 alias zjc="zellij --layout compact"
 alias zja="zellij a"
 alias lg="lazygit"
+alias lgdotfiles="lazygit --git-dir=/Users/dankuri/.dotfiles --work-tree=/Users/dankuri"
 
 # my binds
 bindkey "^[[1;3C" forward-word
