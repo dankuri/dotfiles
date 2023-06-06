@@ -93,4 +93,15 @@ lspconfig.gopls.setup {
   },
 }
 
+lspconfig.jsonls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    json = {
+      schemas = require("schemastore").json.schemas(),
+      validate = { enable = true },
+    },
+  },
+}
+
 lspconfig["golangci_lint_ls"].setup { on_attach = on_attach, capabilities = capabilities }

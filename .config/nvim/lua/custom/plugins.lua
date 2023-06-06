@@ -128,6 +128,10 @@ local plugins = {
     "mbbill/undotree",
     event = "BufRead",
   },
+  {
+    "b0o/schemastore.nvim",
+    ft = "json",
+  },
 }
 
 return plugins
