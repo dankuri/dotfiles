@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {}
 M.ui = {
-  theme = "rosepine",
+  theme = "chadracula",
   transparency = false,
   statusline = {
     theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
