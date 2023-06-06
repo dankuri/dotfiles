@@ -161,6 +161,10 @@ export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# go
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 [ -f "/Users/dankuri/.ghcup/env" ] && source "/Users/dankuri/.ghcup/env" # ghcup-env
 

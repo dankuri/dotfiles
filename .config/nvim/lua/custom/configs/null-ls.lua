@@ -16,6 +16,11 @@ local sources = {
   -- null_ls.builtins.formatting.shfmt,
   -- null_ls.builtins.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
   null_ls.builtins.formatting.stylua,
+  null_ls.builtins.formatting.gofumpt,
+  null_ls.builtins.formatting.goimports_reviser,
+  null_ls.builtins.formatting.golines,
+  -- null_ls.builtins.diagnostics.revive,
+  -- null_ls.builtins.diagnostics.golangci_lint
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
