@@ -9,6 +9,9 @@ M.general = {
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "tmux window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "tmux window up" },
     ["<leader>u"] = { "<cmd> UndotreeToggle<CR>", "toggle undo tree" },
+    ["<leader>gd"] = { "<cmd> Gitsigns diffthis<CR>", "Git diff" },
+    ["<leader>gb"] = { "<cmd> Gitsigns blame_line<CR>", "Git blame line" },
+    ["<leader>gp"] = { "<cmd> Gitsigns preview_hunk_inline<CR>", "Git preview hunk inline" },
     ["<leader>fW"] = {
       function()
         require("telescope.builtin").live_grep {
@@ -18,6 +21,12 @@ M.general = {
         }
       end,
       "find words in all files",
+    },
+    ["<leader>X"] = {
+      function()
+        require("nvchad_ui.tabufline").closeOtherBufs()
+      end,
+      "close all bufs except cur",
     },
   },
 }
