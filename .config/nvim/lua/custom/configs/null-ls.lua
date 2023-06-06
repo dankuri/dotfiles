@@ -6,15 +6,16 @@ end
 
 local sources = {
   null_ls.builtins.formatting.rustfmt,
-  null_ls.builtins.formatting.prettierd,
-  --       .with {
-  --   filetypes = { "html", "json", "markdown", "scss", "css", "typescript", "vue", "yaml" },
-  -- },
+  null_ls.builtins.formatting.prettierd.with {
+    filetypes = { "html", "json", "markdown", "scss", "css", "typescript", "javascript", "vue", "yaml" },
+  },
   -- null_ls.builtins.diagnostics.eslint.with {
   --   command = "eslint_d",
   -- },
   -- null_ls.builtins.formatting.shfmt,
-  -- null_ls.builtins.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+  null_ls.builtins.diagnostics.shellcheck.with {
+    diagnostics_format = "#{m} [#{c}]",
+  },
   null_ls.builtins.formatting.stylua,
   null_ls.builtins.formatting.gofumpt,
   null_ls.builtins.formatting.goimports_reviser,
@@ -31,7 +32,6 @@ local on_attach = function(client, bufnr)
       group = augroup,
       buffer = bufnr,
       callback = function()
-        -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
         vim.lsp.buf.format { bufnr = bufnr }
       end,
     })
