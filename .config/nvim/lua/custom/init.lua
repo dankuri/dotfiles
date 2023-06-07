@@ -7,6 +7,7 @@ vim.opt.softtabstop = 4
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.relativenumber = true
+vim.opt.swapfile = false
 vim.g.autoformat_enabled = true
 vim.g.tmux_navigator_disable_when_zoomed = 1
 vim.g.tmux_navigator_no_wrap = 1
