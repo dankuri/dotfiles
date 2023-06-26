@@ -150,6 +150,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+# for git integration
+export ZSH_THEME_GIT_PROMPT_CLEAN=") %F{green}%B✓ "
+
 # mysql-client stuff
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/mysql-client/lib"
