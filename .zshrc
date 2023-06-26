@@ -107,7 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # my aliases
 alias dps="docker ps"
 alias cr="clear"
-alias c="code"
 alias e="exit"
 alias ls="exa"
 alias la="exa -la"
