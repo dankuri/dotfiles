@@ -6,6 +6,18 @@ M.ui = {
   statusline = {
     theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
   },
+  tabufline = {
+    overriden_modules = function()
+      return {
+        buttons = function()
+          return ""
+        end,
+        CoverNvimTree = function()
+          return ""
+        end,
+      }
+    end,
+  },
   nvdash = {
     load_on_startup = false,
     -- until i figure out a way to not make it inverted
