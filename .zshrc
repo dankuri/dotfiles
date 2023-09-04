@@ -152,10 +152,6 @@ export VISUAL="nvim"
 # for git integration
 export ZSH_THEME_GIT_PROMPT_CLEAN=") %F{green}%B✓ "
 
-# mysql-client stuff
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/mysql-client/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
 
 # bun completions
 [ -s "/Users/dankuri/.bun/_bun" ] && source "/Users/dankuri/.bun/_bun"
