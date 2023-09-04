@@ -174,3 +174,5 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 zstyle ':completion:*' menu select
 # kitty + complete setup zsh | source /dev/stdin
 
+# opam configuration
+[[ ! -r /Users/dankuri/.opam/opam-init/init.zsh ]] || source /Users/dankuri/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
