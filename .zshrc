@@ -171,7 +171,5 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 [ -f "/Users/dankuri/.ghcup/env" ] && source "/Users/dankuri/.ghcup/env" # ghcup-env
 
-# please daily
-
 zstyle ':completion:*' menu select
 kitty + complete setup zsh | source /dev/stdin
