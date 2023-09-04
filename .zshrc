@@ -152,6 +152,10 @@ export VISUAL="nvim"
 # for git integration
 export ZSH_THEME_GIT_PROMPT_CLEAN=") %F{green}%B✓ "
 
+# ngrok completions
+if command -v ngrok &>/dev/null; then
+    eval "$(ngrok completion)"
+fi
 
 # bun completions
 [ -s "/Users/dankuri/.bun/_bun" ] && source "/Users/dankuri/.bun/_bun"
