@@ -72,7 +72,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose zsh-autosuggestions brew)
+plugins=(git docker docker-compose zsh-autosuggestions asdf)
 
 zstyle :omz:plugins:iterm2 shell_integration yes
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -130,10 +130,6 @@ bindkey "^[[1;3D" backward-word
 [ -f ~/.zsh_alias ] && source ~/.zsh_alias
 
 alias dotfiles='/usr/bin/git --git-dir=/Users/dankuri/.dotfiles --work-tree=/Users/dankuri'
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PRETTIERD_DEFAULT_CONFIG="~/.config/prettier/.prettierrc.json"
 
