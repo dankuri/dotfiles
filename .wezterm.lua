@@ -18,12 +18,6 @@ config.color_scheme = "Dracula (Official)"
 config.window_background_opacity = 0.9
 config.hide_tab_bar_if_only_one_tab = true
 config.font_size = 17.0
-config.font = wezterm.font_with_fallback({
-	{ family = "JetBrains Mono", weight = "Medium" },
-	"Nerd Font Symbols",
-	"Noto Color Emoji",
-	-- "Apple Color Emoji",
-})
 config.window_padding = {
 	left = 0,
 	right = 0,
