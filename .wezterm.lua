@@ -15,21 +15,33 @@ end
 
 -- dankuri added
 config.color_scheme = "Dracula (Official)"
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 config.hide_tab_bar_if_only_one_tab = true
 config.font_size = 17.0
 config.font = wezterm.font_with_fallback({
 	{ family = "JetBrains Mono", weight = "Medium" },
 	"Nerd Font Symbols",
-	"Noto Emoji",
+	"Noto Color Emoji",
 	-- "Apple Color Emoji",
-	-- { family = "JetBrainsMono Nerd Font Mono", weight = "Medium" },
 })
 config.window_padding = {
 	left = 0,
 	right = 0,
 	top = 0,
 	bottom = 0,
+}
+
+config.keys = {
+	{
+		key = "h",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+	{
+		key = "l",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
 }
 
 -- and finally, return the configuration to wezterm
