@@ -115,12 +115,7 @@ alias grpo="git remote prune origin"
 alias python="python3"
 alias py="python3"
 alias pip="pip3"
-alias zj="zellij"
-alias zjc="zellij --layout compact"
-alias zja="zellij a"
 alias lg="lazygit"
-alias lgdotfiles="lazygit --git-dir=/Users/dankuri/.dotfiles --work-tree=/Users/dankuri"
-alias mawk="awk"
 
 # my binds
 bindkey "^[[1;3C" forward-word
@@ -129,16 +124,12 @@ bindkey "^[[1;3D" backward-word
 # ssh aliases here...
 [ -f ~/.zsh_alias ] && source ~/.zsh_alias
 
-alias dotfiles='/usr/bin/git --git-dir=/Users/dankuri/.dotfiles --work-tree=/Users/dankuri'
-
 export PRETTIERD_DEFAULT_CONFIG="~/.config/prettier/.prettierrc.json"
 
 fpath+=~/.zfunc
 autoload -Uz compinit
 compinit
 eval "$(zoxide init zsh)"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -153,22 +144,11 @@ if command -v ngrok &>/dev/null; then
     eval "$(ngrok completion)"
 fi
 
-# bun completions
-[ -s "/Users/dankuri/.bun/_bun" ] && source "/Users/dankuri/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# go
-export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-
-[ -f "/Users/dankuri/.ghcup/env" ] && source "/Users/dankuri/.ghcup/env" # ghcup-env
-
 zstyle ':completion:*' menu select
-# kitty + complete setup zsh | source /dev/stdin
 
 # opam configuration
 [[ ! -r /Users/dankuri/.opam/opam-init/init.zsh ]] || source /Users/dankuri/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
