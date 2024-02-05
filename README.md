@@ -6,6 +6,7 @@ You will need to install `git` and `stow`.
 git clone git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm # install tmux plugin manager
 git clone git@github.com:dankuri/dotfiles.git .dotfiles
 cd .dotfiles
+git submodule update --init --recursive # to get submodule for nvim config
 stow .
 ```
 
