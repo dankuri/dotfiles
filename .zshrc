@@ -148,6 +148,10 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# go
+export GOPATH=$HOME/go
+export PATH="$PATH:${GOPATH}/bin"
+
 zstyle ':completion:*' menu select
 
 # opam configuration
