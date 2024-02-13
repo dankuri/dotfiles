@@ -72,9 +72,8 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose zsh-autosuggestions asdf)
+plugins=(git docker docker-compose zsh-autosuggestions asdf fzf zoxide)
 
-zstyle :omz:plugins:iterm2 shell_integration yes
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
@@ -129,9 +128,6 @@ export PRETTIERD_DEFAULT_CONFIG="~/.config/prettier/.prettierrc.json"
 fpath+=~/.zfunc
 autoload -Uz compinit
 compinit
-eval "$(zoxide init zsh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -154,5 +150,3 @@ export PATH="$PATH:${GOPATH}/bin"
 
 zstyle ':completion:*' menu select
 
-# opam configuration
-[[ ! -r /Users/dankuri/.opam/opam-init/init.zsh ]] || source /Users/dankuri/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
