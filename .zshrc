@@ -150,3 +150,6 @@ export PATH="$PATH:${GOPATH}/bin"
 
 zstyle ':completion:*' menu select
 
+
+# bun completions
+[ -s "/Users/dankuri/.bun/_bun" ] && source "/Users/dankuri/.bun/_bun"
