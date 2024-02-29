@@ -115,6 +115,7 @@ alias python="python3"
 alias py="python3"
 alias pip="pip3"
 alias lg="lazygit"
+alias zj="zellij"
 
 # my binds
 bindkey "^[[1;3C" forward-word
