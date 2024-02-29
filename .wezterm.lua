@@ -14,6 +14,7 @@ end
 -- This is where you actually apply your config choices
 
 -- dankuri added
+config.front_end = "WebGpu"
 config.warn_about_missing_glyphs = false
 config.color_scheme = "Dracula (Official)"
 config.window_background_opacity = 0.9
