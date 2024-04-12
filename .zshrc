@@ -72,7 +72,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose kubectl terraform zsh-autosuggestions asdf fzf zoxide)
+plugins=(git docker docker-compose kubectl kube-ps1 terraform zsh-autosuggestions asdf fzf zoxide)
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
@@ -156,10 +156,6 @@ zstyle ':completion:*' menu select
 # bun completions
 [ -s "/Users/dankuri/.bun/_bun" ] && source "/Users/dankuri/.bun/_bun"
 
-# kube-ps1
-if [[ -r "/usr/local/opt/kube-ps1/share/kube-ps1.sh" ]]; then
-    source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-    KUBE_PS1_SYMBOL_USE_IMG=true
-    KUBE_PS1_SUFFIX=") "
-    PS1='$(kube_ps1)'$PS1
-fi
+KUBE_PS1_SYMBOL_USE_IMG=true
+KUBE_PS1_SUFFIX=") "
+PROMPT='$(kube_ps1)'$PROMPT
