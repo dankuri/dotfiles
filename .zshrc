@@ -116,6 +116,8 @@ alias py="python3"
 alias pip="pip3"
 alias lg="lazygit"
 alias zj="zellij"
+alias kctx="kubectx"
+alias kns="kubens"
 
 # my binds
 bindkey "^[[1;3C" forward-word
@@ -151,6 +153,13 @@ export PATH="$PATH:${GOPATH}/bin"
 
 zstyle ':completion:*' menu select
 
-
 # bun completions
 [ -s "/Users/dankuri/.bun/_bun" ] && source "/Users/dankuri/.bun/_bun"
+
+# kube-ps1
+if [[ -r "/usr/local/opt/kube-ps1/share/kube-ps1.sh" ]]; then
+    source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+    KUBE_PS1_SYMBOL_USE_IMG=true
+    KUBE_PS1_SUFFIX=") "
+    PS1='$(kube_ps1)'$PS1
+fi
