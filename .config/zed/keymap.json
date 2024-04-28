@@ -1,0 +1,169 @@
+[
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && !showing_completions && vim_mode == insert",
+    "bindings": {
+      "ctrl-n": "editor::ShowCompletions"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-b": "workspace::ToggleLeftDock",
+      "ctrl-alt-b": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "ctrl-shift-u": "vim::ScrollUp",
+      "ctrl-shift-d": "vim::ScrollDown",
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-shift-u z z"],
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-shift-d z z"],
+      "space p": "editor::Paste",
+      "K": "editor::Hover",
+      "L": "pane::ActivateNextItem",
+      "H": "pane::ActivatePrevItem",
+      "space c a": "editor::ToggleCodeActions",
+      "space f s": "project_symbols::Toggle",
+      "space f d": "diagnostics::Deploy",
+      "space f f": "file_finder::Toggle",
+      "space f w": "workspace::NewSearch",
+      "] d": "editor::GoToDiagnostic",
+      "[ d": "editor::GoToPrevDiagnostic",
+      "space r": "editor::Rename",
+      "space e": "project_panel::ToggleFocus",
+      "space x": "pane::CloseInactiveItems",
+      "ctrl-q": "zed::Quit",
+      "alt-w": "pane::CloseActiveItem",
+      "ctrl-n": "vim::Down" // or something else, just not new file as it intrerrupts the flow a lot
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      "K": "editor::MoveLineUp",
+      "J": "editor::MoveLineDown",
+      // exit visual mode after commenting
+      "g c": ["workspace::SendKeystrokes", "ctrl-/ escape"],
+      "ctrl-shift-u": "vim::ScrollUp",
+      "ctrl-shift-d": "vim::ScrollDown",
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-shift-u z z"],
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-shift-d z z"],
+      "space y": "editor::Copy",
+      "space p": "editor::Paste",
+      "space d": "editor::Delete"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "shift-a": "project_panel::NewDirectory",
+      "a": "workspace::NewFile",
+      "x": "project_panel::Cut",
+      "y": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "d": "project_panel::Delete",
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  // toggle terminal
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-`": "workspace::ToggleBottomDock",
+      "ctrl-n": "workspace::NewTerminal",
+      "ctrl-alt-h": "pane::ActivatePrevItem",
+      "ctrl-alt-l": "pane::ActivateNextItem",
+      "alt-w": "pane::CloseActiveItem"
+    }
+  }
+]
+
+// good stuff man
+// [
+//   {
+//     "context": "Editor && VimControl && !VimWaiting && !menu",
+//     "bindings": {
+//       // put key-bindings here if you want them to work in normal & visual mode
+//     }
+//   },
+//   {
+//     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+//     "bindings": {
+//       // put key-bindings here if you want them to work only in normal mode
+//       // ~~~~~~~ Normal Mode
+//       // Doc hover
+//       "K": "editor::Hover",
+//       // buffer :bn :bp
+//       "L": "pane::ActivateNextItem",
+//       "H": "pane::ActivatePrevItem",
+//       // quick fix
+//       "space g a": "editor::ToggleCodeActions",
+//       "] d": "editor::GoToDiagnostic",
+//       "[ d": "editor::GoToPrevDiagnostic",
+//       "g m": "editor::ExpandMacroRecursively",
+//       // LSP rename    "ga" multi cursor
+//       "space r": "editor::Rename",
+//       // symbol search   "gs"
+//       "space o": "project_symbols::Toggle",
+//       // NERDTree
+//       "space e": "project_panel::ToggleFocus",
+//       "space x": "workspace::CloseAllDocks",
+//       // Terminal Pannel(shell)
+//       "space s h": "terminal_panel::ToggleFocus",
+//       // trouble toggle
+//       "space t": "diagnostics::Deploy"
+//     }
+//   },
+//   {
+//     "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+//     "bindings": {
+//       // visual, visual line & visual block modes
+//       // ~~~~~~ Visual Mode
+//       "K": "editor::MoveLineUp",
+//       "J": "editor::MoveLineDown",
+//       "space g c": "editor::ToggleComments"
+//     }
+//   },
+//   {
+//     "context": "Editor && vim_mode == insert && !menu",
+//     "bindings": {
+//       // put key-bindings here if you want them to work in insert mode
+//       // ~~~~~~ Insert Mode
+//       "j k": ["vim::SwitchMode", "Normal"]
+//     }
+//   },
+//   {
+//     "context": "ProjectPanel",
+//     "bindings": {
+//       "h": "project_panel::CollapseSelectedEntry",
+//       "l": "project_panel::ExpandSelectedEntry",
+//       "j": "menu::SelectNext",
+//       "k": "menu::SelectPrev",
+//       "o": "menu::Confirm",
+//       "r": "project_panel::Rename",
+//       "z c": "project_panel::CollapseSelectedEntry",
+//       "z o": "project_panel::ExpandSelectedEntry",
+//       "shift-o": "project_panel::RevealInFinder",
+//       "x": "project_panel::Cut",
+//       "y": "project_panel::Copy",
+//       "p": "project_panel::Paste",
+//       "d": "project_panel::Delete",
+//       "a": "project_panel::NewFile",
+//       "shift-a": "project_panel::NewDirectory",
+//       "shift-y": "project_panel::CopyRelativePath",
+//       "g y": "project_panel::CopyPath"
+//     }
+//   }
+// ]
