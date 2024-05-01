@@ -60,10 +60,11 @@
     }
   },
   {
-    "context": "ProjectPanel",
+    "context": "ProjectPanel && not_editing",
     "bindings": {
       "shift-a": "project_panel::NewDirectory",
-      "a": "workspace::NewFile",
+      "a": "project_panel::NewFile",
+      "r": "project_panel::Rename",
       "x": "project_panel::Cut",
       "y": "project_panel::Copy",
       "p": "project_panel::Paste",
