@@ -76,13 +76,15 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "terminal_panel::ToggleFocus"
+      "ctrl-`": "terminal_panel::ToggleFocus",
+      "cmd-`": "terminal_panel::ToggleFocus"
     }
   },
   {
     "context": "Terminal",
     "bindings": {
       "ctrl-`": "workspace::ToggleBottomDock",
+      "cmd-`": "workspace::ToggleBottomDock",
       "ctrl-n": "workspace::NewTerminal",
       "ctrl-alt-h": "pane::ActivatePrevItem",
       "ctrl-alt-l": "pane::ActivateNextItem",
