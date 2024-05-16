@@ -34,11 +34,13 @@
       "K": "editor::Hover",
       "L": "pane::ActivateNextItem",
       "H": "pane::ActivatePrevItem",
+      "g r": "editor::FindAllReferences",
       "space c a": "editor::ToggleCodeActions",
       "space f s": "project_symbols::Toggle",
       "space f d": "diagnostics::Deploy",
       "space f f": "file_finder::Toggle",
       "space f w": "workspace::NewSearch",
+      "space f m": "editor::Format",
       "] d": "editor::GoToDiagnostic",
       "[ d": "editor::GoToPrevDiagnostic",
       "] c": "editor::GoToHunk",
@@ -85,8 +87,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "terminal_panel::ToggleFocus",
-      "cmd-`": "terminal_panel::ToggleFocus"
+      "ctrl-`": "terminal_panel::ToggleFocus"
     }
   },
   {
@@ -95,6 +96,7 @@
       "ctrl-`": "workspace::ToggleBottomDock",
       "cmd-`": "workspace::ToggleBottomDock",
       "ctrl-n": "workspace::NewTerminal",
+      "cmd-n": "workspace::NewTerminal",
       "ctrl-alt-h": "pane::ActivatePrevItem",
       "ctrl-alt-l": "pane::ActivateNextItem",
       "alt-w": "pane::CloseActiveItem"
