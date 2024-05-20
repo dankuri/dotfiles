@@ -83,6 +83,8 @@ alias grpo="git remote prune origin"
 alias lg="lazygit"
 alias kctx="kubectx"
 alias kns="kubens"
+alias ..="cd .."
+alias ...="cd ../.."
 
 # ssh aliases
 [ -f ~/.ssh_alias ] && source ~/.ssh_alias
@@ -98,8 +100,6 @@ export VISUAL="nvim"
 # export BUN_INSTALL="$HOME/.bun"
 # export PATH="$BUN_INSTALL/bin:$PATH"
 # export PRETTIERD_DEFAULT_CONFIG="~/.config/prettier/.prettierrc.json"
-
-
 
 # shell integrations
 eval "$(fzf --zsh)"
