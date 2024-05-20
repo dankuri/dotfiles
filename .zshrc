@@ -17,10 +17,9 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # plugins
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
 
 # snippets
 zinit snippet OMZP::git
@@ -31,6 +30,9 @@ zinit snippet OMZP::terraform
 
 # load completions
 autoload -Uz compinit && compinit
+
+# fzf-tab should be loaded after compinit
+zinit light Aloxaf/fzf-tab
 
 zinit cdreplay -q
 
@@ -83,7 +85,7 @@ alias kctx="kubectx"
 alias kns="kubens"
 
 # ssh aliases
-[ -f ~/.zsh_alias ] && source ~/.zsh_alias
+[ -f ~/.ssh_alias ] && source ~/.ssh_alias
 
 # env vars
 export FZF_DEFAULT_OPTS="--bind='ctrl-y:accept'"
@@ -102,3 +104,4 @@ export VISUAL="nvim"
 # shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
+eval "$(mise activate zsh)"
