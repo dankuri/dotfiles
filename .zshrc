@@ -89,6 +89,9 @@ alias kns="kubens"
 alias ..="cd .."
 alias ...="cd ../.."
 
+# for some time maybe
+alias yay="paru"
+
 # ssh aliases
 [ -f ~/.ssh_alias ] && source ~/.ssh_alias
 
