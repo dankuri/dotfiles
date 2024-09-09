@@ -66,6 +66,9 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# allow comments
+setopt interactive_comments
+
 # completion styling
 zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
