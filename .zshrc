@@ -101,6 +101,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export GOPATH=$HOME/go
 export PATH="$PATH:${GOPATH}/bin"
+export PATH="$PATH:$HOME/.local/bin"
 export ERL_AFLAGS="-kernel shell_history enabled"
 # export PATH="/home/dankuri/.turso:$PATH"
 # export BUN_INSTALL="$HOME/.bun"
