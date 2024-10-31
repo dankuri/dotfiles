@@ -1,14 +1,19 @@
 ;; Caps to escape/control configuration for Kanata
+(defcfg
+  process-unmapped-keys yes
+)
+
 (defsrc
-  caps
+  caps rctl
 )
 
 (defalias
-  escctrl (tap-hold 100 100 esc lctl)
+  escctrl (tap-hold-press 100 100 esc lctl)
+  rctlcaps (tap-hold-press 100 100 caps rctl)
 )
 
 (deflayer base
-  @escctrl
+  @escctrl @rctlcaps
 )
 
 ;; vim:ft=lisp
