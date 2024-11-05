@@ -19,6 +19,7 @@ config.font = wezterm.font_with_fallback({
 	"Noto Color Emoji",
 	"Symbols Nerd Font Mono",
 })
+config.front_end = "WebGpu"
 config.warn_about_missing_glyphs = false
 config.color_scheme = "Dracula (Official)"
 config.window_background_opacity = 0.9
