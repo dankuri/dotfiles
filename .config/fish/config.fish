@@ -13,8 +13,8 @@ if status is-interactive
     fish_hybrid_key_bindings # vim editing + emacs keybindings
     fzf --fish | source
 
-    bind -M insert \el 'nextd && commandline -f repaint'
-    bind -M insert \eh 'prevd && commandline -f repaint'
+    bind -M insert \e\cl 'nextd && commandline -f repaint'
+    bind -M insert \e\ch 'prevd && commandline -f repaint'
 
     alias cr "clear"
     alias e "exit"
