@@ -11,6 +11,7 @@ mise activate fish | source
 
 if status is-interactive
     fish_hybrid_key_bindings # vim editing + emacs keybindings
+    starship init fish | source
     fzf --fish | source
 
     bind -M insert \e\cl 'nextd && commandline -f repaint'
