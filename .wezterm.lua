@@ -25,6 +25,7 @@ config.color_scheme = "Dracula (Official)"
 config.window_background_opacity = 0.9
 config.hide_tab_bar_if_only_one_tab = true
 config.font_size = 17.0
+config.max_fps = 120
 config.window_padding = {
 	left = 0,
 	right = 0,
