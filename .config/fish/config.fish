@@ -1,3 +1,11 @@
+# for macos
+if test -e "/opt/homebrew/bin"
+    fish_add_path "/opt/homebrew/bin"
+end
+if test -e "/opt/homebrew/opt/libpq/bin" # psql - brew install libpq
+    fish_add_path "/opt/homebrew/opt/libpq/bin"
+end
+
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -x GOPATH $HOME/.go
