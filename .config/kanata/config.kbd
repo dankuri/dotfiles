@@ -1,19 +1,26 @@
-;; Caps to escape/control configuration for Kanata
+;; Caps -> Tap for Esc | Hold for Ctrl
+;; Right Ctrl -> Tap for Caps | Hold for Ctrl
+;; Alt + H J K L -> Vim-like Arrow keys
 (defcfg
   process-unmapped-keys yes
 )
 
 (defsrc
-  caps rctl
+  caps rctl h j k l ralt
 )
 
 (defalias
   escctrl (tap-hold-press 100 100 esc lctl)
   rctlcaps (tap-hold-press 100 100 caps rctl)
+  vimarrows (tap-hold-press 100 100 ralt (layer-while-held arrows))
 )
 
 (deflayer base
-  @escctrl @rctlcaps
+  @escctrl @rctlcaps _ _ _ _ @vimarrows
+)
+
+(deflayer arrows
+  _ _ left down up rght @vimarrows
 )
 
 ;; vim:ft=lisp
