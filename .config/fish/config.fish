@@ -32,5 +32,6 @@ if status is-interactive
     alias ll "eza -l"
     alias grpo "git remote prune origin"
     alias lg "lazygit"
+    alias lzd "lazydocker"
     abbr --add dco "docker compose"
 end
