@@ -3,3 +3,4 @@ font-size = 18
 font-style = Medium
 theme = Dracula
 background-opacity = 0.95
+background-blur = true
