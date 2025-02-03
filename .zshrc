@@ -111,4 +111,3 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
-eval "$(mise activate zsh)"

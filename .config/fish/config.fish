@@ -18,7 +18,6 @@ set -x ERL_AFLAGS "-kernel shell_history enabled"
 set -U fish_greeting
 
 zoxide init fish | source
-mise activate fish | source
 
 if status is-interactive
     fish_hybrid_key_bindings # vim editing + emacs keybindings
@@ -28,13 +27,10 @@ if status is-interactive
     bind -M insert \e\cl 'nextd && commandline -f repaint'
     bind -M insert \e\ch 'prevd && commandline -f repaint'
 
-    alias cr "clear"
-    alias e "exit"
     alias em "emacsclient -tc"
     alias ls "eza"
     alias la "eza -la"
     alias ll "eza -l"
-    alias grpo "git remote prune origin"
     alias lg "lazygit"
     alias lzd "lazydocker"
     abbr --add dco "docker compose"
