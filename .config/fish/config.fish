@@ -5,6 +5,9 @@ end
 if test -e "/opt/homebrew/opt/libpq/bin" # psql - brew install libpq
     fish_add_path "/opt/homebrew/opt/libpq/bin"
 end
+if test -e "$HOME/.config/emacs/bin" # doom emacs
+    fish_add_path "$HOME/.config/emacs/bin"
+end
 
 set -gx EDITOR nvim
 set -gx VISUAL nvim
@@ -27,6 +30,7 @@ if status is-interactive
 
     alias cr "clear"
     alias e "exit"
+    alias em "emacsclient -tc"
     alias ls "eza"
     alias la "eza -la"
     alias ll "eza -l"
