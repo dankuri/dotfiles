@@ -11,6 +11,7 @@ end
 
 set -gx EDITOR nvim
 set -gx VISUAL nvim
+set -gx MANPAGER "nvim +Man!"
 set -x GOPATH $HOME/.go
 set -x PATH $PATH $GOPATH/bin 
 set -x PATH $PATH $HOME/.local/bin 
