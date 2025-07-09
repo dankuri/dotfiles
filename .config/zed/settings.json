@@ -10,7 +10,7 @@
   "features": {
     "copilot": false
   },
-  "theme": "Dracula",
+  "theme": "Catppuccin Mocha",
   "base_keymap": "VSCode",
   "ui_font_size": 22,
   "buffer_font_size": 22,
