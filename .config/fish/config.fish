@@ -34,5 +34,6 @@ if status is-interactive
     alias ll "eza -l"
     alias lg "lazygit"
     alias lzd "lazydocker"
+    alias ts "tmux-sessionizer"
     abbr --add dco "docker compose"
 end
