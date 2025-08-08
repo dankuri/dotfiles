@@ -1,6 +1,13 @@
-font-family = JetBrains Mono NL
-font-size = 18
-font-style = Medium
+# font-family = JetBrains Mono NL
+# font-style = Medium
+# font-size = 18
+
+font-family = Iosevka
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+font-size = 20
+
 theme = catppuccin-mocha
 background-opacity = 0.95
 background-blur = true
