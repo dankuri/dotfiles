@@ -9,14 +9,14 @@ if test -e "$HOME/.config/emacs/bin" # doom emacs
     fish_add_path "$HOME/.config/emacs/bin"
 end
 
+set -U fish_greeting
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx MANPAGER "nvim +Man!"
-set -x GOPATH $HOME/.go
-set -x PATH $PATH $GOPATH/bin 
-set -x PATH $PATH $HOME/.local/bin 
 set -x ERL_AFLAGS "-kernel shell_history enabled"
-set -U fish_greeting
+set -x GOPATH $HOME/.go
+fish_add_path $GOPATH/bin
+fish_add_path $HOME/.local/bin
 
 zoxide init fish | source
 
