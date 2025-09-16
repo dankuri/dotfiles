@@ -4,11 +4,11 @@ font-feature = -liga
 font-feature = -dlig
 font-size = 20
 
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 background-opacity = 0.95
 background-blur = true
-gtk-adwaita = false
 gtk-titlebar = false
+shell-integration-features = ssh-env
 
 # for macos change alt to cmd
 keybind = alt+1=text:\x011
