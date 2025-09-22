@@ -11,12 +11,12 @@ gtk-titlebar = false
 shell-integration-features = ssh-env
 
 # for macos change alt to cmd
-keybind = alt+1=text:\x011
-keybind = alt+2=text:\x012
-keybind = alt+3=text:\x013
-keybind = alt+4=text:\x014
-keybind = alt+5=text:\x015
-keybind = alt+6=text:\x016
-keybind = alt+7=text:\x017
-keybind = alt+8=text:\x018
-keybind = alt+9=text:\x019
+keybind = alt+digit_1=text:\x011
+keybind = alt+digit_2=text:\x012
+keybind = alt+digit_3=text:\x013
+keybind = alt+digit_4=text:\x014
+keybind = alt+digit_5=text:\x015
+keybind = alt+digit_6=text:\x016
+keybind = alt+digit_7=text:\x017
+keybind = alt+digit_8=text:\x018
+keybind = alt+digit_9=text:\x019
