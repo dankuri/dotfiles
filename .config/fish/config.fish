@@ -18,22 +18,18 @@ set -x GOPATH $HOME/.go
 fish_add_path $GOPATH/bin
 fish_add_path $HOME/.local/bin
 
-zoxide init fish | source
-
 if status is-interactive
     fish_hybrid_key_bindings # vim editing + emacs keybindings
     starship init fish | source
     fzf --fish | source
+    zoxide init fish | source
 
     bind -M insert \e\cl 'nextd && commandline -f repaint'
     bind -M insert \e\ch 'prevd && commandline -f repaint'
 
-    alias em "emacsclient -tc"
-    alias ls "eza"
-    alias la "eza -la"
-    alias ll "eza -l"
-    alias lg "lazygit"
-    alias lzd "lazydocker"
-    alias ts "tmux-sessionizer"
+    abbr --add em "emacsclient -tc"
+    abbr --add lg "lazygit"
+    abbr --add lzd "lazydocker"
+    abbr --add ts "tmux-sessionizer"
     abbr --add dco "docker compose"
 end
