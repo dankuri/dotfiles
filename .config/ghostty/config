@@ -2,13 +2,15 @@ font-family = Iosevka
 font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
-font-size = 20
+font-size = 18
 
 theme = Catppuccin Mocha
 background-opacity = 0.95
 background-blur = true
 gtk-titlebar = false
 shell-integration-features = ssh-env
+macos-icon=holographic
+macos-non-native-fullscreen=padded-notch
 
 # for macos change alt to cmd
 keybind = alt+digit_1=text:\x011
