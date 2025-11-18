@@ -7,7 +7,6 @@ font-size = 18
 theme = Catppuccin Mocha
 background-opacity = 0.95
 background-blur = true
-gtk-titlebar = false
 shell-integration-features = ssh-env
 macos-icon=holographic
 macos-non-native-fullscreen=padded-notch
