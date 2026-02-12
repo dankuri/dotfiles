@@ -10,32 +10,72 @@
   "features": {
     "copilot": false
   },
-  "theme": "Catppuccin Mocha",
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+  "title_bar": {
+    "show_sign_in": false,
+  },
+  "languages": {
+    "Proto": {
+      "format_on_save": "off",
+    },
+    "Go": {
+      "inlay_hints": {
+        "show_type_hints": false,
+        "show_parameter_hints": false,
+      },
+    },
+  },
+  "ui_font_size": 20.0,
+  "buffer_font_size": 16.0,
+  "buffer_font_family": ".ZedMono",
+  "icon_theme": "Zed (Default)",
+  "colorize_brackets": false,
+  "inlay_hints": {
+    "show_type_hints": true,
+    "show_parameter_hints": false,
+    "enabled": true,
+  },
+  "auto_signature_help": true,
+  "sticky_scroll": {
+    "enabled": true,
+  },
+  "which_key": {
+    "delay_ms": null,
+    "enabled": true,
+  },
+  "autosave": "off",
+  "use_smartcase_search": true,
+  "disable_ai": true,
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "theme": "Catppuccin Mocha - No Italics",
   "base_keymap": "VSCode",
-  "ui_font_size": 22,
-  "buffer_font_size": 22,
   "buffer_line_height": "standard",
   "vim_mode": true,
-  "relative_line_numbers": true,
-  "show_copilot_suggestions": false,
   "auto_update": false,
+  "relative_line_numbers": "enabled",
   "wrap_guides": [120],
   "confirm_quit": false,
   "vim": {
-    "use_system_clipboard": "never"
+    "toggle_relative_line_numbers": false,
+    "use_system_clipboard": "never",
   },
   "git": {
     "inline_blame": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
   "terminal": {
-    "font_family": "JetBrainsMono Nerd Font",
-    "option_as_meta": true
+    "font_family": "Iosevka",
+    "option_as_meta": true,
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "lsp": {
     "gopls": {
@@ -47,19 +87,9 @@
         "analyses": {
           "unusedparams": true,
           "unusedwrite": true,
-          "unusedvariable": true
-        }
-      }
-    }
+          "unusedvariable": true,
+        },
+      },
+    },
   },
-  "language_overrides": {
-    "Elixir": {
-      "format_on_save": {
-        "external": {
-          "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
-      }
-    }
-  }
 }

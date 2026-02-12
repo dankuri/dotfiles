@@ -2,26 +2,27 @@
   {
     "context": "Editor && showing_completions",
     "bindings": {
-      "ctrl-y": "editor::ConfirmCompletion"
-    }
+      "ctrl-y": "editor::ConfirmCompletion",
+    },
   },
   {
-    "context": "Editor && !showing_completions && vim_mode == insert",
+    "context": "Editor && !showing_completions",
     "bindings": {
-      "ctrl-n": "editor::ShowCompletions"
-    }
+      "ctrl-n": "editor::ShowCompletions",
+      "ctrl-space": "editor::ShowCompletions",
+    },
   },
   {
     "bindings": {
       "ctrl-b": "workspace::ToggleLeftDock",
-      "ctrl-alt-b": "workspace::ToggleRightDock"
-    }
+      "ctrl-alt-b": "workspace::ToggleRightDock",
+    },
   },
   {
     "context": "EmptyPane",
     "bindings": {
-      "space e": "project_panel::ToggleFocus"
-    }
+      "space e": "project_panel::ToggleFocus",
+    },
   },
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
@@ -35,6 +36,7 @@
       "L": "pane::ActivateNextItem",
       "H": "pane::ActivatePreviousItem",
       "g r": "editor::FindAllReferences",
+      "g i": "editor::GoToImplementation",
       "space c a": "editor::ToggleCodeActions",
       "space f s": "project_symbols::Toggle",
       "space f d": "diagnostics::Deploy",
@@ -43,16 +45,16 @@
       "space f m": "editor::Format",
       "] d": "editor::GoToDiagnostic",
       "[ d": "editor::GoToPreviousDiagnostic",
-      "] c": "editor::GoToHunk",
-      "[ c": "editor::GoToPreviousHunk",
-      "space g p": "editor::ToggleHunkDiff",
+      "] g": "editor::GoToHunk",
+      "[ g": "editor::GoToPreviousHunk",
+      "space g p": "editor::ToggleSelectedDiffHunks",
       "space r": "editor::Rename",
       "space e": "project_panel::ToggleFocus",
-      "space x": "pane::CloseInactiveItems",
+      "space x": "pane::CloseOtherItems",
       "ctrl-q": "zed::Quit",
       "alt-w": "pane::CloseActiveItem",
-      "ctrl-n": "vim::Down" // or something else, just not new file as it intrerrupts the flow a lot
-    }
+      "ctrl-n": "vim::Down", // or something else, just not new file as it intrerrupts the flow a lot
+    },
   },
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
@@ -67,8 +69,8 @@
       "ctrl-d": ["workspace::SendKeystrokes", "ctrl-shift-d z z"],
       "space y": "editor::Copy",
       "space p": "editor::Paste",
-      "space d": "editor::Delete"
-    }
+      "space d": "editor::Delete",
+    },
   },
   {
     "context": "ProjectPanel && not_editing",
@@ -80,15 +82,16 @@
       "y": "project_panel::Copy",
       "p": "project_panel::Paste",
       "d": "project_panel::Delete",
-      "space e": "workspace::ToggleLeftDock"
-    }
+      "space e": "workspace::ToggleLeftDock",
+    },
   },
   // toggle terminal
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "terminal_panel::ToggleFocus"
-    }
+      "ctrl-`": "terminal_panel::ToggleFocus",
+      "cmd-t": "terminal_panel::Toggle",
+    },
   },
   {
     "context": "Terminal",
@@ -99,7 +102,17 @@
       "cmd-n": "workspace::NewTerminal",
       "ctrl-alt-h": "pane::ActivatePreviousItem",
       "ctrl-alt-l": "pane::ActivateNextItem",
-      "alt-w": "pane::CloseActiveItem"
+      "alt-w": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "bindings": {
+      "cmd-h": null
+    }
+  },
+  {
+    "bindings": {
+      "alt-cmd-h": null
     }
   }
 ]
