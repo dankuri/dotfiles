@@ -28,9 +28,12 @@ if status is-interactive
     bind -M insert \e\cl 'nextd && commandline -f repaint'
     bind -M insert \e\ch 'prevd && commandline -f repaint'
 
+    alias yaegi="rlwrap yaegi"
+
     abbr --add em "emacsclient -tc"
     abbr --add lg "lazygit"
     abbr --add lzd "lazydocker"
-    abbr --add ts "tmux-sessionizer"
     abbr --add dco "docker compose"
+    abbr --add ts "tmux-sessionizer"
+    abbr --add lj "zellij"
 end
