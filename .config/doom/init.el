@@ -72,8 +72,8 @@
        (dired +icons +dirvish) ; making dired pretty [functional]
        electric                ; smarter, keyword-based electric-indent
        ;;eww                   ; the internet is gross
-       tramp                   ; remote files at your arthritic fingertips
        (ibuffer +icons)        ; interactive buffer management
+       tramp                   ; remote files at your arthritic fingertips
        undo                    ; persistent, smarter undo for your inevitable mistakes
        vc                      ; version-control and Emacs, sitting in a tree
 
@@ -81,7 +81,8 @@
        ;;eshell            ; the elisp shell that works everywhere
        ;;shell             ; simple shell REPL for Emacs
        ;;term              ; basic terminal emulator for Emacs
-       vterm               ; the best terminal emulation in Emacs
+       ;;vterm             ; almost the best terminal emulation in Emacs
+       ghostel             ; the best terminal emulation in Emacs
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
@@ -112,7 +113,7 @@
 
        :os
        (:if (featurep :system 'macos) macos)  ; improve compatibility with macOS
-       tty                 ; improve the terminal Emacs experience
+       (tty +osc)                 ; improve the terminal Emacs experience
 
        :lang
        ;;ada                        ; In strong typing we (blindly) trust
@@ -197,3 +198,7 @@
        :config
        ;;literate
        (default +bindings +smartparens))
+
+;; If you're a dark-mode user who suffers from the "flash of white Emacs" when
+;; you first open Emacs, uncomment this (and adjust the color as you like).
+(add-to-list 'initial-frame-alist '(background-color . "#000000"))

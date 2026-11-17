@@ -47,12 +47,8 @@
 
 (setq shell-file-name (executable-find
                        "bash"))
-(setq-default vterm-shell (executable-find
-                           "fish"))
 (setq-default explicit-shell-file-name (executable-find
                                         "fish"))
-
-(setq vterm-timer-delay 0.01)
 
 (remove-hook 'doom-first-input-hook
              #'evil-snipe-mode)
